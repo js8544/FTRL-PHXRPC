@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package ftrl;
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/empty.proto";
+
+import "phxrpc/rpc/phxrpc.proto";
+
+message AdvertisementRequest{
+	int64 user_id = 1;
+}
+
+message AdvertisementResult{ 
+	int64 ad_id = 1;
+}
+
+message AdvertisementFeedback{
+	int64 ad_id = 1;
+	bool feedback = 2;
+
+}
+service Advertisement{
+
+	rpc Advertisement(AdvertisementRequest) returns (AdvertisementResult){
+		option(phxrpc.CmdID) = 1;
+		option(phxrpc.OptString) = "u:";
+		option(phxrpc.Usage) = "-u <user_id>";
+	}
+
+	rpc Feedback(AdvertisementFeedback) returns (google.protobuf.Empty){
+		option(phxrpc.CmdID) = 2;
+		option(phxrpc.OptString) = "ad: f:";
+		option(phxrpc.Usage) = "-ad <advertisement_id> -f <feedback>";
+	}
+}
