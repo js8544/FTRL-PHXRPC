@@ -10,15 +10,76 @@
 
 #include "advertisement_server_config.h"
 #include "ftrl.pb.h"
+#include <sys/ipc.h>
+#include <sys/shm.h>
 
-int RequestAdId(::google::protobuf::int64 user_id){
-	//request for result
-	int ad_id = 0;
-	return ad_id;
+#define SHM_KEY 0x1234
+
+struct shmseg {
+    int mode; //0: user_id ready, 1: ad_id ready, 2:feedback ready
+    long long user_id;
+    long long ad_id;
+    bool feedback; 
+};
+
+::google::protobuf::int64 RequestAdId(::google::protobuf::int64 user_id){
+	int shmid;
+    shmid = shmget(SHM_KEY, sizeof(struct shmseg), 0644|IPC_CREAT);
+    if (shmid == -1) {
+      perror("Shared memory");
+      return 1;
+    }
+
+    shmseg *shmp;
+
+    shmp = (struct shmseg*) shmat(shmid, NULL, 0);
+    if (shmp == (void *) -1) {
+        perror("Shared memory attach");
+        return 1;
+    }
+
+    while(shmp->mode != -1){
+        //waiting
+    }
+
+    shmp->user_id = (long long) user_id;
+
+    shmp->mode = 0;
+
+    while(shmp->mode != 1){
+        //waiting for result
+    }
+
+    return (::google::protobuf::int64)shmp->ad_id;
+
+
 }
 
-void SendFeedback(::google::protobuf::int64 ad_id){
-	//send feedback for training 
+void SendFeedback(::google::protobuf::int64 ad_id, int feedback){
+	int shmid;
+    shmid = shmget(SHM_KEY, sizeof(struct shmseg), 0644|IPC_CREAT);
+    if (shmid == -1) {
+      perror("Shared memory");
+      return 1;
+    }
+
+    shmseg *shmp;
+
+    shmp = (struct shmseg*) shmat(shmid, NULL, 0);
+    if (shmp == (void *) -1) {
+        perror("Shared memory attach");
+        return 1;
+    }
+
+    while(shmp->mode != -1){
+        //waiting
+    }
+
+    shmp->ad_id = (long long) ad_id;
+    shmp->feedback = feedback;
+    shmp->mode = 2;
+
+    return;
 }
 
 AdvertisementServiceImpl::AdvertisementServiceImpl(ServiceArgs_t &app_args) : args_(app_args) {
@@ -33,7 +94,7 @@ int AdvertisementServiceImpl::PHXEcho(const google::protobuf::StringValue &req, 
 }
 
 int AdvertisementServiceImpl::Advertisement(const ftrl::AdvertisementRequest &req, ftrl::AdvertisementResult *resp) {
-    int ad_id = RequestAdId(req.user_id());//to be implemented
+    ::google::protobuf::int64 ad_id = RequestAdId(req.user_id());//to be implemented
     resp->set_ad_id((::google::protobuf::int64) ad_id);
     return 0;
 }
