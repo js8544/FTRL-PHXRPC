@@ -12,7 +12,7 @@
 #include "ftrl.pb.h"
 #include <sys/ipc.h>
 #include <sys/shm.h>
-
+#include <iostream>
 #define SHM_KEY 0x1234
 
 struct shmseg {
@@ -39,18 +39,25 @@ struct shmseg {
     }
 
     while(shmp->mode != -1){
+        std::cout<<"mode: "<<shmp->mode<<"\n";
         //waiting
     }
-
+    std::cout<<"sending user_id "<<user_id<<"\n";
     shmp->user_id = (long long) user_id;
 
     shmp->mode = 0;
+    std::cout<<"sending user_id "<<user_id<<"\n";
 
     while(shmp->mode != 1){
+        std::cout<<"mode: "<<shmp->mode<<"\n";
         //waiting for result
     }
 
+    std::cout<<"receive ad_id "<<shmp->ad_id<<"\n";
+
+    shmp->mode = -1;
     return (::google::protobuf::int64)shmp->ad_id;
+
 
 
 }
@@ -60,7 +67,6 @@ void SendFeedback(::google::protobuf::int64 ad_id, int feedback){
     shmid = shmget(SHM_KEY, sizeof(struct shmseg), 0644|IPC_CREAT);
     if (shmid == -1) {
       perror("Shared memory");
-      return 1;
     }
 
     shmseg *shmp;
@@ -68,7 +74,6 @@ void SendFeedback(::google::protobuf::int64 ad_id, int feedback){
     shmp = (struct shmseg*) shmat(shmid, NULL, 0);
     if (shmp == (void *) -1) {
         perror("Shared memory attach");
-        return 1;
     }
 
     while(shmp->mode != -1){
@@ -94,6 +99,7 @@ int AdvertisementServiceImpl::PHXEcho(const google::protobuf::StringValue &req, 
 }
 
 int AdvertisementServiceImpl::Advertisement(const ftrl::AdvertisementRequest &req, ftrl::AdvertisementResult *resp) {
+    std::cout<<"user_id "<<req.user_id()<<"\n";
     ::google::protobuf::int64 ad_id = RequestAdId(req.user_id());//to be implemented
     resp->set_ad_id((::google::protobuf::int64) ad_id);
     return 0;

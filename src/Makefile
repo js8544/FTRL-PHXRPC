@@ -4,7 +4,7 @@
 #
 #
 
-include /home/jinshang/Dropbox/Tencent/phxrpc/phxrpc.mk
+include /home/jinshang/Downloads/phxrpc/phxrpc.mk
 
 LDFLAGS := -L$(PHXRPC_ROOT)/lib -lphxrpc $(LDFLAGS)
 
