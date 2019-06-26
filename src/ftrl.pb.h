@@ -58,42 +58,42 @@ struct TableStruct_ftrl_2eproto {
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ftrl_2eproto;
 namespace ftrl {
-class AdvertisementFeedback;
-class AdvertisementFeedbackDefaultTypeInternal;
-extern AdvertisementFeedbackDefaultTypeInternal _AdvertisementFeedback_default_instance_;
-class AdvertisementRequest;
-class AdvertisementRequestDefaultTypeInternal;
-extern AdvertisementRequestDefaultTypeInternal _AdvertisementRequest_default_instance_;
-class AdvertisementResult;
-class AdvertisementResultDefaultTypeInternal;
-extern AdvertisementResultDefaultTypeInternal _AdvertisementResult_default_instance_;
+class FTRLFeedback;
+class FTRLFeedbackDefaultTypeInternal;
+extern FTRLFeedbackDefaultTypeInternal _FTRLFeedback_default_instance_;
+class FTRLRequest;
+class FTRLRequestDefaultTypeInternal;
+extern FTRLRequestDefaultTypeInternal _FTRLRequest_default_instance_;
+class FTRLResult;
+class FTRLResultDefaultTypeInternal;
+extern FTRLResultDefaultTypeInternal _FTRLResult_default_instance_;
 }  // namespace ftrl
 PROTOBUF_NAMESPACE_OPEN
-template<> ::ftrl::AdvertisementFeedback* Arena::CreateMaybeMessage<::ftrl::AdvertisementFeedback>(Arena*);
-template<> ::ftrl::AdvertisementRequest* Arena::CreateMaybeMessage<::ftrl::AdvertisementRequest>(Arena*);
-template<> ::ftrl::AdvertisementResult* Arena::CreateMaybeMessage<::ftrl::AdvertisementResult>(Arena*);
+template<> ::ftrl::FTRLFeedback* Arena::CreateMaybeMessage<::ftrl::FTRLFeedback>(Arena*);
+template<> ::ftrl::FTRLRequest* Arena::CreateMaybeMessage<::ftrl::FTRLRequest>(Arena*);
+template<> ::ftrl::FTRLResult* Arena::CreateMaybeMessage<::ftrl::FTRLResult>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace ftrl {
 
 // ===================================================================
 
-class AdvertisementRequest :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ftrl.AdvertisementRequest) */ {
+class FTRLRequest :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ftrl.FTRLRequest) */ {
  public:
-  AdvertisementRequest();
-  virtual ~AdvertisementRequest();
+  FTRLRequest();
+  virtual ~FTRLRequest();
 
-  AdvertisementRequest(const AdvertisementRequest& from);
-  AdvertisementRequest(AdvertisementRequest&& from) noexcept
-    : AdvertisementRequest() {
+  FTRLRequest(const FTRLRequest& from);
+  FTRLRequest(FTRLRequest&& from) noexcept
+    : FTRLRequest() {
     *this = ::std::move(from);
   }
 
-  inline AdvertisementRequest& operator=(const AdvertisementRequest& from) {
+  inline FTRLRequest& operator=(const FTRLRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline AdvertisementRequest& operator=(AdvertisementRequest&& from) noexcept {
+  inline FTRLRequest& operator=(FTRLRequest&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -111,34 +111,34 @@ class AdvertisementRequest :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const AdvertisementRequest& default_instance();
+  static const FTRLRequest& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const AdvertisementRequest* internal_default_instance() {
-    return reinterpret_cast<const AdvertisementRequest*>(
-               &_AdvertisementRequest_default_instance_);
+  static inline const FTRLRequest* internal_default_instance() {
+    return reinterpret_cast<const FTRLRequest*>(
+               &_FTRLRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  void Swap(AdvertisementRequest* other);
-  friend void swap(AdvertisementRequest& a, AdvertisementRequest& b) {
+  void Swap(FTRLRequest* other);
+  friend void swap(FTRLRequest& a, FTRLRequest& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline AdvertisementRequest* New() const final {
-    return CreateMaybeMessage<AdvertisementRequest>(nullptr);
+  inline FTRLRequest* New() const final {
+    return CreateMaybeMessage<FTRLRequest>(nullptr);
   }
 
-  AdvertisementRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AdvertisementRequest>(arena);
+  FTRLRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<FTRLRequest>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const AdvertisementRequest& from);
-  void MergeFrom(const AdvertisementRequest& from);
+  void CopyFrom(const FTRLRequest& from);
+  void MergeFrom(const FTRLRequest& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -159,10 +159,10 @@ class AdvertisementRequest :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(AdvertisementRequest* other);
+  void InternalSwap(FTRLRequest* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ftrl.AdvertisementRequest";
+    return "ftrl.FTRLRequest";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -192,7 +192,7 @@ class AdvertisementRequest :
   ::PROTOBUF_NAMESPACE_ID::int64 user_id() const;
   void set_user_id(::PROTOBUF_NAMESPACE_ID::int64 value);
 
-  // @@protoc_insertion_point(class_scope:ftrl.AdvertisementRequest)
+  // @@protoc_insertion_point(class_scope:ftrl.FTRLRequest)
  private:
   class HasBitSetters;
 
@@ -203,23 +203,23 @@ class AdvertisementRequest :
 };
 // -------------------------------------------------------------------
 
-class AdvertisementResult :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ftrl.AdvertisementResult) */ {
+class FTRLResult :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ftrl.FTRLResult) */ {
  public:
-  AdvertisementResult();
-  virtual ~AdvertisementResult();
+  FTRLResult();
+  virtual ~FTRLResult();
 
-  AdvertisementResult(const AdvertisementResult& from);
-  AdvertisementResult(AdvertisementResult&& from) noexcept
-    : AdvertisementResult() {
+  FTRLResult(const FTRLResult& from);
+  FTRLResult(FTRLResult&& from) noexcept
+    : FTRLResult() {
     *this = ::std::move(from);
   }
 
-  inline AdvertisementResult& operator=(const AdvertisementResult& from) {
+  inline FTRLResult& operator=(const FTRLResult& from) {
     CopyFrom(from);
     return *this;
   }
-  inline AdvertisementResult& operator=(AdvertisementResult&& from) noexcept {
+  inline FTRLResult& operator=(FTRLResult&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -237,34 +237,34 @@ class AdvertisementResult :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const AdvertisementResult& default_instance();
+  static const FTRLResult& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const AdvertisementResult* internal_default_instance() {
-    return reinterpret_cast<const AdvertisementResult*>(
-               &_AdvertisementResult_default_instance_);
+  static inline const FTRLResult* internal_default_instance() {
+    return reinterpret_cast<const FTRLResult*>(
+               &_FTRLResult_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     1;
 
-  void Swap(AdvertisementResult* other);
-  friend void swap(AdvertisementResult& a, AdvertisementResult& b) {
+  void Swap(FTRLResult* other);
+  friend void swap(FTRLResult& a, FTRLResult& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline AdvertisementResult* New() const final {
-    return CreateMaybeMessage<AdvertisementResult>(nullptr);
+  inline FTRLResult* New() const final {
+    return CreateMaybeMessage<FTRLResult>(nullptr);
   }
 
-  AdvertisementResult* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AdvertisementResult>(arena);
+  FTRLResult* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<FTRLResult>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const AdvertisementResult& from);
-  void MergeFrom(const AdvertisementResult& from);
+  void CopyFrom(const FTRLResult& from);
+  void MergeFrom(const FTRLResult& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -285,10 +285,10 @@ class AdvertisementResult :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(AdvertisementResult* other);
+  void InternalSwap(FTRLResult* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ftrl.AdvertisementResult";
+    return "ftrl.FTRLResult";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -318,7 +318,7 @@ class AdvertisementResult :
   ::PROTOBUF_NAMESPACE_ID::int64 ad_id() const;
   void set_ad_id(::PROTOBUF_NAMESPACE_ID::int64 value);
 
-  // @@protoc_insertion_point(class_scope:ftrl.AdvertisementResult)
+  // @@protoc_insertion_point(class_scope:ftrl.FTRLResult)
  private:
   class HasBitSetters;
 
@@ -329,23 +329,23 @@ class AdvertisementResult :
 };
 // -------------------------------------------------------------------
 
-class AdvertisementFeedback :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ftrl.AdvertisementFeedback) */ {
+class FTRLFeedback :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ftrl.FTRLFeedback) */ {
  public:
-  AdvertisementFeedback();
-  virtual ~AdvertisementFeedback();
+  FTRLFeedback();
+  virtual ~FTRLFeedback();
 
-  AdvertisementFeedback(const AdvertisementFeedback& from);
-  AdvertisementFeedback(AdvertisementFeedback&& from) noexcept
-    : AdvertisementFeedback() {
+  FTRLFeedback(const FTRLFeedback& from);
+  FTRLFeedback(FTRLFeedback&& from) noexcept
+    : FTRLFeedback() {
     *this = ::std::move(from);
   }
 
-  inline AdvertisementFeedback& operator=(const AdvertisementFeedback& from) {
+  inline FTRLFeedback& operator=(const FTRLFeedback& from) {
     CopyFrom(from);
     return *this;
   }
-  inline AdvertisementFeedback& operator=(AdvertisementFeedback&& from) noexcept {
+  inline FTRLFeedback& operator=(FTRLFeedback&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -363,34 +363,34 @@ class AdvertisementFeedback :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const AdvertisementFeedback& default_instance();
+  static const FTRLFeedback& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const AdvertisementFeedback* internal_default_instance() {
-    return reinterpret_cast<const AdvertisementFeedback*>(
-               &_AdvertisementFeedback_default_instance_);
+  static inline const FTRLFeedback* internal_default_instance() {
+    return reinterpret_cast<const FTRLFeedback*>(
+               &_FTRLFeedback_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     2;
 
-  void Swap(AdvertisementFeedback* other);
-  friend void swap(AdvertisementFeedback& a, AdvertisementFeedback& b) {
+  void Swap(FTRLFeedback* other);
+  friend void swap(FTRLFeedback& a, FTRLFeedback& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline AdvertisementFeedback* New() const final {
-    return CreateMaybeMessage<AdvertisementFeedback>(nullptr);
+  inline FTRLFeedback* New() const final {
+    return CreateMaybeMessage<FTRLFeedback>(nullptr);
   }
 
-  AdvertisementFeedback* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<AdvertisementFeedback>(arena);
+  FTRLFeedback* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<FTRLFeedback>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const AdvertisementFeedback& from);
-  void MergeFrom(const AdvertisementFeedback& from);
+  void CopyFrom(const FTRLFeedback& from);
+  void MergeFrom(const FTRLFeedback& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -411,10 +411,10 @@ class AdvertisementFeedback :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(AdvertisementFeedback* other);
+  void InternalSwap(FTRLFeedback* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ftrl.AdvertisementFeedback";
+    return "ftrl.FTRLFeedback";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -456,7 +456,7 @@ class AdvertisementFeedback :
   bool feedback() const;
   void set_feedback(bool value);
 
-  // @@protoc_insertion_point(class_scope:ftrl.AdvertisementFeedback)
+  // @@protoc_insertion_point(class_scope:ftrl.FTRLFeedback)
  private:
   class HasBitSetters;
 
@@ -476,84 +476,84 @@ class AdvertisementFeedback :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// AdvertisementRequest
+// FTRLRequest
 
 // int64 user_id = 1;
-inline void AdvertisementRequest::clear_user_id() {
+inline void FTRLRequest::clear_user_id() {
   user_id_ = PROTOBUF_LONGLONG(0);
 }
-inline ::PROTOBUF_NAMESPACE_ID::int64 AdvertisementRequest::user_id() const {
-  // @@protoc_insertion_point(field_get:ftrl.AdvertisementRequest.user_id)
+inline ::PROTOBUF_NAMESPACE_ID::int64 FTRLRequest::user_id() const {
+  // @@protoc_insertion_point(field_get:ftrl.FTRLRequest.user_id)
   return user_id_;
 }
-inline void AdvertisementRequest::set_user_id(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void FTRLRequest::set_user_id(::PROTOBUF_NAMESPACE_ID::int64 value) {
   
   user_id_ = value;
-  // @@protoc_insertion_point(field_set:ftrl.AdvertisementRequest.user_id)
+  // @@protoc_insertion_point(field_set:ftrl.FTRLRequest.user_id)
 }
 
 // -------------------------------------------------------------------
 
-// AdvertisementResult
+// FTRLResult
 
 // int64 ad_id = 1;
-inline void AdvertisementResult::clear_ad_id() {
+inline void FTRLResult::clear_ad_id() {
   ad_id_ = PROTOBUF_LONGLONG(0);
 }
-inline ::PROTOBUF_NAMESPACE_ID::int64 AdvertisementResult::ad_id() const {
-  // @@protoc_insertion_point(field_get:ftrl.AdvertisementResult.ad_id)
+inline ::PROTOBUF_NAMESPACE_ID::int64 FTRLResult::ad_id() const {
+  // @@protoc_insertion_point(field_get:ftrl.FTRLResult.ad_id)
   return ad_id_;
 }
-inline void AdvertisementResult::set_ad_id(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void FTRLResult::set_ad_id(::PROTOBUF_NAMESPACE_ID::int64 value) {
   
   ad_id_ = value;
-  // @@protoc_insertion_point(field_set:ftrl.AdvertisementResult.ad_id)
+  // @@protoc_insertion_point(field_set:ftrl.FTRLResult.ad_id)
 }
 
 // -------------------------------------------------------------------
 
-// AdvertisementFeedback
+// FTRLFeedback
 
 // int64 user_id = 1;
-inline void AdvertisementFeedback::clear_user_id() {
+inline void FTRLFeedback::clear_user_id() {
   user_id_ = PROTOBUF_LONGLONG(0);
 }
-inline ::PROTOBUF_NAMESPACE_ID::int64 AdvertisementFeedback::user_id() const {
-  // @@protoc_insertion_point(field_get:ftrl.AdvertisementFeedback.user_id)
+inline ::PROTOBUF_NAMESPACE_ID::int64 FTRLFeedback::user_id() const {
+  // @@protoc_insertion_point(field_get:ftrl.FTRLFeedback.user_id)
   return user_id_;
 }
-inline void AdvertisementFeedback::set_user_id(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void FTRLFeedback::set_user_id(::PROTOBUF_NAMESPACE_ID::int64 value) {
   
   user_id_ = value;
-  // @@protoc_insertion_point(field_set:ftrl.AdvertisementFeedback.user_id)
+  // @@protoc_insertion_point(field_set:ftrl.FTRLFeedback.user_id)
 }
 
 // int64 ad_id = 2;
-inline void AdvertisementFeedback::clear_ad_id() {
+inline void FTRLFeedback::clear_ad_id() {
   ad_id_ = PROTOBUF_LONGLONG(0);
 }
-inline ::PROTOBUF_NAMESPACE_ID::int64 AdvertisementFeedback::ad_id() const {
-  // @@protoc_insertion_point(field_get:ftrl.AdvertisementFeedback.ad_id)
+inline ::PROTOBUF_NAMESPACE_ID::int64 FTRLFeedback::ad_id() const {
+  // @@protoc_insertion_point(field_get:ftrl.FTRLFeedback.ad_id)
   return ad_id_;
 }
-inline void AdvertisementFeedback::set_ad_id(::PROTOBUF_NAMESPACE_ID::int64 value) {
+inline void FTRLFeedback::set_ad_id(::PROTOBUF_NAMESPACE_ID::int64 value) {
   
   ad_id_ = value;
-  // @@protoc_insertion_point(field_set:ftrl.AdvertisementFeedback.ad_id)
+  // @@protoc_insertion_point(field_set:ftrl.FTRLFeedback.ad_id)
 }
 
 // bool feedback = 3;
-inline void AdvertisementFeedback::clear_feedback() {
+inline void FTRLFeedback::clear_feedback() {
   feedback_ = false;
 }
-inline bool AdvertisementFeedback::feedback() const {
-  // @@protoc_insertion_point(field_get:ftrl.AdvertisementFeedback.feedback)
+inline bool FTRLFeedback::feedback() const {
+  // @@protoc_insertion_point(field_get:ftrl.FTRLFeedback.feedback)
   return feedback_;
 }
-inline void AdvertisementFeedback::set_feedback(bool value) {
+inline void FTRLFeedback::set_feedback(bool value) {
   
   feedback_ = value;
-  // @@protoc_insertion_point(field_set:ftrl.AdvertisementFeedback.feedback)
+  // @@protoc_insertion_point(field_set:ftrl.FTRLFeedback.feedback)
 }
 
 #ifdef __GNUC__

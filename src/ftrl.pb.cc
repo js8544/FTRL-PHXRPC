@@ -16,60 +16,60 @@
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 namespace ftrl {
-class AdvertisementRequestDefaultTypeInternal {
+class FTRLRequestDefaultTypeInternal {
  public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AdvertisementRequest> _instance;
-} _AdvertisementRequest_default_instance_;
-class AdvertisementResultDefaultTypeInternal {
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<FTRLRequest> _instance;
+} _FTRLRequest_default_instance_;
+class FTRLResultDefaultTypeInternal {
  public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AdvertisementResult> _instance;
-} _AdvertisementResult_default_instance_;
-class AdvertisementFeedbackDefaultTypeInternal {
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<FTRLResult> _instance;
+} _FTRLResult_default_instance_;
+class FTRLFeedbackDefaultTypeInternal {
  public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<AdvertisementFeedback> _instance;
-} _AdvertisementFeedback_default_instance_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<FTRLFeedback> _instance;
+} _FTRLFeedback_default_instance_;
 }  // namespace ftrl
-static void InitDefaultsscc_info_AdvertisementFeedback_ftrl_2eproto() {
+static void InitDefaultsscc_info_FTRLFeedback_ftrl_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ftrl::_AdvertisementFeedback_default_instance_;
-    new (ptr) ::ftrl::AdvertisementFeedback();
+    void* ptr = &::ftrl::_FTRLFeedback_default_instance_;
+    new (ptr) ::ftrl::FTRLFeedback();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ftrl::AdvertisementFeedback::InitAsDefaultInstance();
+  ::ftrl::FTRLFeedback::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AdvertisementFeedback_ftrl_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AdvertisementFeedback_ftrl_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_FTRLFeedback_ftrl_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_FTRLFeedback_ftrl_2eproto}, {}};
 
-static void InitDefaultsscc_info_AdvertisementRequest_ftrl_2eproto() {
+static void InitDefaultsscc_info_FTRLRequest_ftrl_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ftrl::_AdvertisementRequest_default_instance_;
-    new (ptr) ::ftrl::AdvertisementRequest();
+    void* ptr = &::ftrl::_FTRLRequest_default_instance_;
+    new (ptr) ::ftrl::FTRLRequest();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ftrl::AdvertisementRequest::InitAsDefaultInstance();
+  ::ftrl::FTRLRequest::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AdvertisementRequest_ftrl_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AdvertisementRequest_ftrl_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_FTRLRequest_ftrl_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_FTRLRequest_ftrl_2eproto}, {}};
 
-static void InitDefaultsscc_info_AdvertisementResult_ftrl_2eproto() {
+static void InitDefaultsscc_info_FTRLResult_ftrl_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::ftrl::_AdvertisementResult_default_instance_;
-    new (ptr) ::ftrl::AdvertisementResult();
+    void* ptr = &::ftrl::_FTRLResult_default_instance_;
+    new (ptr) ::ftrl::FTRLResult();
     ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::ftrl::AdvertisementResult::InitAsDefaultInstance();
+  ::ftrl::FTRLResult::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_AdvertisementResult_ftrl_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_AdvertisementResult_ftrl_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_FTRLResult_ftrl_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_FTRLResult_ftrl_2eproto}, {}};
 
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_ftrl_2eproto[3];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_ftrl_2eproto = nullptr;
@@ -77,52 +77,51 @@ static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_s
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_ftrl_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ftrl::AdvertisementRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ftrl::FTRLRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ftrl::AdvertisementRequest, user_id_),
+  PROTOBUF_FIELD_OFFSET(::ftrl::FTRLRequest, user_id_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ftrl::AdvertisementResult, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ftrl::FTRLResult, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ftrl::AdvertisementResult, ad_id_),
+  PROTOBUF_FIELD_OFFSET(::ftrl::FTRLResult, ad_id_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ftrl::AdvertisementFeedback, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ftrl::FTRLFeedback, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ftrl::AdvertisementFeedback, user_id_),
-  PROTOBUF_FIELD_OFFSET(::ftrl::AdvertisementFeedback, ad_id_),
-  PROTOBUF_FIELD_OFFSET(::ftrl::AdvertisementFeedback, feedback_),
+  PROTOBUF_FIELD_OFFSET(::ftrl::FTRLFeedback, user_id_),
+  PROTOBUF_FIELD_OFFSET(::ftrl::FTRLFeedback, ad_id_),
+  PROTOBUF_FIELD_OFFSET(::ftrl::FTRLFeedback, feedback_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::ftrl::AdvertisementRequest)},
-  { 6, -1, sizeof(::ftrl::AdvertisementResult)},
-  { 12, -1, sizeof(::ftrl::AdvertisementFeedback)},
+  { 0, -1, sizeof(::ftrl::FTRLRequest)},
+  { 6, -1, sizeof(::ftrl::FTRLResult)},
+  { 12, -1, sizeof(::ftrl::FTRLFeedback)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ftrl::_AdvertisementRequest_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ftrl::_AdvertisementResult_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ftrl::_AdvertisementFeedback_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ftrl::_FTRLRequest_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ftrl::_FTRLResult_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ftrl::_FTRLFeedback_default_instance_),
 };
 
 const char descriptor_table_protodef_ftrl_2eproto[] =
   "\n\nftrl.proto\022\004ftrl\032\036google/protobuf/wrap"
   "pers.proto\032\033google/protobuf/empty.proto\032"
-  "\027phxrpc/rpc/phxrpc.proto\"\'\n\024Advertisemen"
-  "tRequest\022\017\n\007user_id\030\001 \001(\003\"$\n\023Advertiseme"
-  "ntResult\022\r\n\005ad_id\030\001 \001(\003\"I\n\025Advertisement"
-  "Feedback\022\017\n\007user_id\030\001 \001(\003\022\r\n\005ad_id\030\002 \001(\003"
-  "\022\020\n\010feedback\030\003 \001(\0102\362\001\n\rAdvertisement\022e\n\r"
-  "Advertisement\022\032.ftrl.AdvertisementReques"
-  "t\032\031.ftrl.AdvertisementResult\"\035\200\310\320\007\001\212\310\320\007\002"
-  "u:\222\310\320\007\014-u <user_id>\022z\n\010Feedback\022\033.ftrl.A"
-  "dvertisementFeedback\032\026.google.protobuf.E"
-  "mpty\"9\200\310\320\007\002\212\310\320\007\006ad: f:\222\310\320\007$-ad <advertis"
-  "ement_id> -f <feedback>b\006proto3"
+  "\027phxrpc/rpc/phxrpc.proto\"\036\n\013FTRLRequest\022"
+  "\017\n\007user_id\030\001 \001(\003\"\033\n\nFTRLResult\022\r\n\005ad_id\030"
+  "\001 \001(\003\"@\n\014FTRLFeedback\022\017\n\007user_id\030\001 \001(\003\022\r"
+  "\n\005ad_id\030\002 \001(\003\022\020\n\010feedback\030\003 \001(\0102\310\001\n\004FTRL"
+  "\022J\n\004FTRL\022\021.ftrl.FTRLRequest\032\020.ftrl.FTRLR"
+  "esult\"\035\200\310\320\007\001\212\310\320\007\002u:\222\310\320\007\014-u <user_id>\022t\n\010"
+  "Feedback\022\022.ftrl.FTRLFeedback\032\026.google.pr"
+  "otobuf.Empty\"<\200\310\320\007\002\212\310\320\007\010u: a: r:\222\310\320\007%-u "
+  "<user_id> -a <ad_id> -r <feedback>b\006prot"
+  "o3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_ftrl_2eproto_deps[3] = {
   &::descriptor_table_google_2fprotobuf_2fempty_2eproto,
@@ -130,14 +129,14 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor
   &::descriptor_table_phxrpc_2frpc_2fphxrpc_2eproto,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_ftrl_2eproto_sccs[3] = {
-  &scc_info_AdvertisementFeedback_ftrl_2eproto.base,
-  &scc_info_AdvertisementRequest_ftrl_2eproto.base,
-  &scc_info_AdvertisementResult_ftrl_2eproto.base,
+  &scc_info_FTRLFeedback_ftrl_2eproto.base,
+  &scc_info_FTRLRequest_ftrl_2eproto.base,
+  &scc_info_FTRLResult_ftrl_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_ftrl_2eproto_once;
 static bool descriptor_table_ftrl_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ftrl_2eproto = {
-  &descriptor_table_ftrl_2eproto_initialized, descriptor_table_protodef_ftrl_2eproto, "ftrl.proto", 511,
+  &descriptor_table_ftrl_2eproto_initialized, descriptor_table_protodef_ftrl_2eproto, "ftrl.proto", 442,
   &descriptor_table_ftrl_2eproto_once, descriptor_table_ftrl_2eproto_sccs, descriptor_table_ftrl_2eproto_deps, 3, 3,
   schemas, file_default_instances, TableStruct_ftrl_2eproto::offsets,
   file_level_metadata_ftrl_2eproto, 3, file_level_enum_descriptors_ftrl_2eproto, file_level_service_descriptors_ftrl_2eproto,
@@ -149,52 +148,52 @@ namespace ftrl {
 
 // ===================================================================
 
-void AdvertisementRequest::InitAsDefaultInstance() {
+void FTRLRequest::InitAsDefaultInstance() {
 }
-class AdvertisementRequest::HasBitSetters {
+class FTRLRequest::HasBitSetters {
  public:
 };
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int AdvertisementRequest::kUserIdFieldNumber;
+const int FTRLRequest::kUserIdFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-AdvertisementRequest::AdvertisementRequest()
+FTRLRequest::FTRLRequest()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:ftrl.AdvertisementRequest)
+  // @@protoc_insertion_point(constructor:ftrl.FTRLRequest)
 }
-AdvertisementRequest::AdvertisementRequest(const AdvertisementRequest& from)
+FTRLRequest::FTRLRequest(const FTRLRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   user_id_ = from.user_id_;
-  // @@protoc_insertion_point(copy_constructor:ftrl.AdvertisementRequest)
+  // @@protoc_insertion_point(copy_constructor:ftrl.FTRLRequest)
 }
 
-void AdvertisementRequest::SharedCtor() {
+void FTRLRequest::SharedCtor() {
   user_id_ = PROTOBUF_LONGLONG(0);
 }
 
-AdvertisementRequest::~AdvertisementRequest() {
-  // @@protoc_insertion_point(destructor:ftrl.AdvertisementRequest)
+FTRLRequest::~FTRLRequest() {
+  // @@protoc_insertion_point(destructor:ftrl.FTRLRequest)
   SharedDtor();
 }
 
-void AdvertisementRequest::SharedDtor() {
+void FTRLRequest::SharedDtor() {
 }
 
-void AdvertisementRequest::SetCachedSize(int size) const {
+void FTRLRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const AdvertisementRequest& AdvertisementRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AdvertisementRequest_ftrl_2eproto.base);
+const FTRLRequest& FTRLRequest::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_FTRLRequest_ftrl_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void AdvertisementRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:ftrl.AdvertisementRequest)
+void FTRLRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:ftrl.FTRLRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -204,7 +203,7 @@ void AdvertisementRequest::Clear() {
 }
 
 #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* AdvertisementRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* FTRLRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
@@ -238,11 +237,11 @@ failure:
 #undef CHK_
 }
 #else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool AdvertisementRequest::MergePartialFromCodedStream(
+bool FTRLRequest::MergePartialFromCodedStream(
     ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:ftrl.AdvertisementRequest)
+  // @@protoc_insertion_point(parse_start:ftrl.FTRLRequest)
   for (;;) {
     ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -273,18 +272,18 @@ bool AdvertisementRequest::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:ftrl.AdvertisementRequest)
+  // @@protoc_insertion_point(parse_success:ftrl.FTRLRequest)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:ftrl.AdvertisementRequest)
+  // @@protoc_insertion_point(parse_failure:ftrl.FTRLRequest)
   return false;
 #undef DO_
 }
 #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
-void AdvertisementRequest::SerializeWithCachedSizes(
+void FTRLRequest::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:ftrl.AdvertisementRequest)
+  // @@protoc_insertion_point(serialize_start:ftrl.FTRLRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -297,12 +296,12 @@ void AdvertisementRequest::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:ftrl.AdvertisementRequest)
+  // @@protoc_insertion_point(serialize_end:ftrl.FTRLRequest)
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* AdvertisementRequest::InternalSerializeWithCachedSizesToArray(
+::PROTOBUF_NAMESPACE_ID::uint8* FTRLRequest::InternalSerializeWithCachedSizesToArray(
     ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ftrl.AdvertisementRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:ftrl.FTRLRequest)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -315,12 +314,12 @@ void AdvertisementRequest::SerializeWithCachedSizes(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ftrl.AdvertisementRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:ftrl.FTRLRequest)
   return target;
 }
 
-size_t AdvertisementRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ftrl.AdvertisementRequest)
+size_t FTRLRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ftrl.FTRLRequest)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -344,23 +343,23 @@ size_t AdvertisementRequest::ByteSizeLong() const {
   return total_size;
 }
 
-void AdvertisementRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ftrl.AdvertisementRequest)
+void FTRLRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:ftrl.FTRLRequest)
   GOOGLE_DCHECK_NE(&from, this);
-  const AdvertisementRequest* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AdvertisementRequest>(
+  const FTRLRequest* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<FTRLRequest>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ftrl.AdvertisementRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ftrl.FTRLRequest)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ftrl.AdvertisementRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:ftrl.FTRLRequest)
     MergeFrom(*source);
   }
 }
 
-void AdvertisementRequest::MergeFrom(const AdvertisementRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ftrl.AdvertisementRequest)
+void FTRLRequest::MergeFrom(const FTRLRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:ftrl.FTRLRequest)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -371,87 +370,87 @@ void AdvertisementRequest::MergeFrom(const AdvertisementRequest& from) {
   }
 }
 
-void AdvertisementRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ftrl.AdvertisementRequest)
+void FTRLRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:ftrl.FTRLRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void AdvertisementRequest::CopyFrom(const AdvertisementRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ftrl.AdvertisementRequest)
+void FTRLRequest::CopyFrom(const FTRLRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ftrl.FTRLRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool AdvertisementRequest::IsInitialized() const {
+bool FTRLRequest::IsInitialized() const {
   return true;
 }
 
-void AdvertisementRequest::Swap(AdvertisementRequest* other) {
+void FTRLRequest::Swap(FTRLRequest* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void AdvertisementRequest::InternalSwap(AdvertisementRequest* other) {
+void FTRLRequest::InternalSwap(FTRLRequest* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(user_id_, other->user_id_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata AdvertisementRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata FTRLRequest::GetMetadata() const {
   return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void AdvertisementResult::InitAsDefaultInstance() {
+void FTRLResult::InitAsDefaultInstance() {
 }
-class AdvertisementResult::HasBitSetters {
+class FTRLResult::HasBitSetters {
  public:
 };
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int AdvertisementResult::kAdIdFieldNumber;
+const int FTRLResult::kAdIdFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-AdvertisementResult::AdvertisementResult()
+FTRLResult::FTRLResult()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:ftrl.AdvertisementResult)
+  // @@protoc_insertion_point(constructor:ftrl.FTRLResult)
 }
-AdvertisementResult::AdvertisementResult(const AdvertisementResult& from)
+FTRLResult::FTRLResult(const FTRLResult& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ad_id_ = from.ad_id_;
-  // @@protoc_insertion_point(copy_constructor:ftrl.AdvertisementResult)
+  // @@protoc_insertion_point(copy_constructor:ftrl.FTRLResult)
 }
 
-void AdvertisementResult::SharedCtor() {
+void FTRLResult::SharedCtor() {
   ad_id_ = PROTOBUF_LONGLONG(0);
 }
 
-AdvertisementResult::~AdvertisementResult() {
-  // @@protoc_insertion_point(destructor:ftrl.AdvertisementResult)
+FTRLResult::~FTRLResult() {
+  // @@protoc_insertion_point(destructor:ftrl.FTRLResult)
   SharedDtor();
 }
 
-void AdvertisementResult::SharedDtor() {
+void FTRLResult::SharedDtor() {
 }
 
-void AdvertisementResult::SetCachedSize(int size) const {
+void FTRLResult::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const AdvertisementResult& AdvertisementResult::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AdvertisementResult_ftrl_2eproto.base);
+const FTRLResult& FTRLResult::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_FTRLResult_ftrl_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void AdvertisementResult::Clear() {
-// @@protoc_insertion_point(message_clear_start:ftrl.AdvertisementResult)
+void FTRLResult::Clear() {
+// @@protoc_insertion_point(message_clear_start:ftrl.FTRLResult)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -461,7 +460,7 @@ void AdvertisementResult::Clear() {
 }
 
 #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* AdvertisementResult::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* FTRLResult::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
@@ -495,11 +494,11 @@ failure:
 #undef CHK_
 }
 #else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool AdvertisementResult::MergePartialFromCodedStream(
+bool FTRLResult::MergePartialFromCodedStream(
     ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:ftrl.AdvertisementResult)
+  // @@protoc_insertion_point(parse_start:ftrl.FTRLResult)
   for (;;) {
     ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -530,18 +529,18 @@ bool AdvertisementResult::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:ftrl.AdvertisementResult)
+  // @@protoc_insertion_point(parse_success:ftrl.FTRLResult)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:ftrl.AdvertisementResult)
+  // @@protoc_insertion_point(parse_failure:ftrl.FTRLResult)
   return false;
 #undef DO_
 }
 #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
-void AdvertisementResult::SerializeWithCachedSizes(
+void FTRLResult::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:ftrl.AdvertisementResult)
+  // @@protoc_insertion_point(serialize_start:ftrl.FTRLResult)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -554,12 +553,12 @@ void AdvertisementResult::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:ftrl.AdvertisementResult)
+  // @@protoc_insertion_point(serialize_end:ftrl.FTRLResult)
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* AdvertisementResult::InternalSerializeWithCachedSizesToArray(
+::PROTOBUF_NAMESPACE_ID::uint8* FTRLResult::InternalSerializeWithCachedSizesToArray(
     ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ftrl.AdvertisementResult)
+  // @@protoc_insertion_point(serialize_to_array_start:ftrl.FTRLResult)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -572,12 +571,12 @@ void AdvertisementResult::SerializeWithCachedSizes(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ftrl.AdvertisementResult)
+  // @@protoc_insertion_point(serialize_to_array_end:ftrl.FTRLResult)
   return target;
 }
 
-size_t AdvertisementResult::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ftrl.AdvertisementResult)
+size_t FTRLResult::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ftrl.FTRLResult)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -601,23 +600,23 @@ size_t AdvertisementResult::ByteSizeLong() const {
   return total_size;
 }
 
-void AdvertisementResult::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ftrl.AdvertisementResult)
+void FTRLResult::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:ftrl.FTRLResult)
   GOOGLE_DCHECK_NE(&from, this);
-  const AdvertisementResult* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AdvertisementResult>(
+  const FTRLResult* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<FTRLResult>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ftrl.AdvertisementResult)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ftrl.FTRLResult)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ftrl.AdvertisementResult)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:ftrl.FTRLResult)
     MergeFrom(*source);
   }
 }
 
-void AdvertisementResult::MergeFrom(const AdvertisementResult& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ftrl.AdvertisementResult)
+void FTRLResult::MergeFrom(const FTRLResult& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:ftrl.FTRLResult)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -628,93 +627,93 @@ void AdvertisementResult::MergeFrom(const AdvertisementResult& from) {
   }
 }
 
-void AdvertisementResult::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ftrl.AdvertisementResult)
+void FTRLResult::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:ftrl.FTRLResult)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void AdvertisementResult::CopyFrom(const AdvertisementResult& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ftrl.AdvertisementResult)
+void FTRLResult::CopyFrom(const FTRLResult& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ftrl.FTRLResult)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool AdvertisementResult::IsInitialized() const {
+bool FTRLResult::IsInitialized() const {
   return true;
 }
 
-void AdvertisementResult::Swap(AdvertisementResult* other) {
+void FTRLResult::Swap(FTRLResult* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void AdvertisementResult::InternalSwap(AdvertisementResult* other) {
+void FTRLResult::InternalSwap(FTRLResult* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(ad_id_, other->ad_id_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata AdvertisementResult::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata FTRLResult::GetMetadata() const {
   return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-void AdvertisementFeedback::InitAsDefaultInstance() {
+void FTRLFeedback::InitAsDefaultInstance() {
 }
-class AdvertisementFeedback::HasBitSetters {
+class FTRLFeedback::HasBitSetters {
  public:
 };
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int AdvertisementFeedback::kUserIdFieldNumber;
-const int AdvertisementFeedback::kAdIdFieldNumber;
-const int AdvertisementFeedback::kFeedbackFieldNumber;
+const int FTRLFeedback::kUserIdFieldNumber;
+const int FTRLFeedback::kAdIdFieldNumber;
+const int FTRLFeedback::kFeedbackFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-AdvertisementFeedback::AdvertisementFeedback()
+FTRLFeedback::FTRLFeedback()
   : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
-  // @@protoc_insertion_point(constructor:ftrl.AdvertisementFeedback)
+  // @@protoc_insertion_point(constructor:ftrl.FTRLFeedback)
 }
-AdvertisementFeedback::AdvertisementFeedback(const AdvertisementFeedback& from)
+FTRLFeedback::FTRLFeedback(const FTRLFeedback& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&user_id_, &from.user_id_,
     static_cast<size_t>(reinterpret_cast<char*>(&feedback_) -
     reinterpret_cast<char*>(&user_id_)) + sizeof(feedback_));
-  // @@protoc_insertion_point(copy_constructor:ftrl.AdvertisementFeedback)
+  // @@protoc_insertion_point(copy_constructor:ftrl.FTRLFeedback)
 }
 
-void AdvertisementFeedback::SharedCtor() {
+void FTRLFeedback::SharedCtor() {
   ::memset(&user_id_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&feedback_) -
       reinterpret_cast<char*>(&user_id_)) + sizeof(feedback_));
 }
 
-AdvertisementFeedback::~AdvertisementFeedback() {
-  // @@protoc_insertion_point(destructor:ftrl.AdvertisementFeedback)
+FTRLFeedback::~FTRLFeedback() {
+  // @@protoc_insertion_point(destructor:ftrl.FTRLFeedback)
   SharedDtor();
 }
 
-void AdvertisementFeedback::SharedDtor() {
+void FTRLFeedback::SharedDtor() {
 }
 
-void AdvertisementFeedback::SetCachedSize(int size) const {
+void FTRLFeedback::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const AdvertisementFeedback& AdvertisementFeedback::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_AdvertisementFeedback_ftrl_2eproto.base);
+const FTRLFeedback& FTRLFeedback::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_FTRLFeedback_ftrl_2eproto.base);
   return *internal_default_instance();
 }
 
 
-void AdvertisementFeedback::Clear() {
-// @@protoc_insertion_point(message_clear_start:ftrl.AdvertisementFeedback)
+void FTRLFeedback::Clear() {
+// @@protoc_insertion_point(message_clear_start:ftrl.FTRLFeedback)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -726,7 +725,7 @@ void AdvertisementFeedback::Clear() {
 }
 
 #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* AdvertisementFeedback::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* FTRLFeedback::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
@@ -774,11 +773,11 @@ failure:
 #undef CHK_
 }
 #else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool AdvertisementFeedback::MergePartialFromCodedStream(
+bool FTRLFeedback::MergePartialFromCodedStream(
     ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
   ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-  // @@protoc_insertion_point(parse_start:ftrl.AdvertisementFeedback)
+  // @@protoc_insertion_point(parse_start:ftrl.FTRLFeedback)
   for (;;) {
     ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -835,18 +834,18 @@ bool AdvertisementFeedback::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:ftrl.AdvertisementFeedback)
+  // @@protoc_insertion_point(parse_success:ftrl.FTRLFeedback)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:ftrl.AdvertisementFeedback)
+  // @@protoc_insertion_point(parse_failure:ftrl.FTRLFeedback)
   return false;
 #undef DO_
 }
 #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
-void AdvertisementFeedback::SerializeWithCachedSizes(
+void FTRLFeedback::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:ftrl.AdvertisementFeedback)
+  // @@protoc_insertion_point(serialize_start:ftrl.FTRLFeedback)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -869,12 +868,12 @@ void AdvertisementFeedback::SerializeWithCachedSizes(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
-  // @@protoc_insertion_point(serialize_end:ftrl.AdvertisementFeedback)
+  // @@protoc_insertion_point(serialize_end:ftrl.FTRLFeedback)
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* AdvertisementFeedback::InternalSerializeWithCachedSizesToArray(
+::PROTOBUF_NAMESPACE_ID::uint8* FTRLFeedback::InternalSerializeWithCachedSizesToArray(
     ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ftrl.AdvertisementFeedback)
+  // @@protoc_insertion_point(serialize_to_array_start:ftrl.FTRLFeedback)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -897,12 +896,12 @@ void AdvertisementFeedback::SerializeWithCachedSizes(
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ftrl.AdvertisementFeedback)
+  // @@protoc_insertion_point(serialize_to_array_end:ftrl.FTRLFeedback)
   return target;
 }
 
-size_t AdvertisementFeedback::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ftrl.AdvertisementFeedback)
+size_t FTRLFeedback::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ftrl.FTRLFeedback)
   size_t total_size = 0;
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -938,23 +937,23 @@ size_t AdvertisementFeedback::ByteSizeLong() const {
   return total_size;
 }
 
-void AdvertisementFeedback::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ftrl.AdvertisementFeedback)
+void FTRLFeedback::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:ftrl.FTRLFeedback)
   GOOGLE_DCHECK_NE(&from, this);
-  const AdvertisementFeedback* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AdvertisementFeedback>(
+  const FTRLFeedback* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<FTRLFeedback>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ftrl.AdvertisementFeedback)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ftrl.FTRLFeedback)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ftrl.AdvertisementFeedback)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:ftrl.FTRLFeedback)
     MergeFrom(*source);
   }
 }
 
-void AdvertisementFeedback::MergeFrom(const AdvertisementFeedback& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ftrl.AdvertisementFeedback)
+void FTRLFeedback::MergeFrom(const FTRLFeedback& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:ftrl.FTRLFeedback)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -971,29 +970,29 @@ void AdvertisementFeedback::MergeFrom(const AdvertisementFeedback& from) {
   }
 }
 
-void AdvertisementFeedback::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ftrl.AdvertisementFeedback)
+void FTRLFeedback::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:ftrl.FTRLFeedback)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void AdvertisementFeedback::CopyFrom(const AdvertisementFeedback& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ftrl.AdvertisementFeedback)
+void FTRLFeedback::CopyFrom(const FTRLFeedback& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ftrl.FTRLFeedback)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool AdvertisementFeedback::IsInitialized() const {
+bool FTRLFeedback::IsInitialized() const {
   return true;
 }
 
-void AdvertisementFeedback::Swap(AdvertisementFeedback* other) {
+void FTRLFeedback::Swap(FTRLFeedback* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void AdvertisementFeedback::InternalSwap(AdvertisementFeedback* other) {
+void FTRLFeedback::InternalSwap(FTRLFeedback* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
   swap(user_id_, other->user_id_);
@@ -1001,7 +1000,7 @@ void AdvertisementFeedback::InternalSwap(AdvertisementFeedback* other) {
   swap(feedback_, other->feedback_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata AdvertisementFeedback::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata FTRLFeedback::GetMetadata() const {
   return GetMetadataStatic();
 }
 
@@ -1009,14 +1008,14 @@ void AdvertisementFeedback::InternalSwap(AdvertisementFeedback* other) {
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace ftrl
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::ftrl::AdvertisementRequest* Arena::CreateMaybeMessage< ::ftrl::AdvertisementRequest >(Arena* arena) {
-  return Arena::CreateInternal< ::ftrl::AdvertisementRequest >(arena);
+template<> PROTOBUF_NOINLINE ::ftrl::FTRLRequest* Arena::CreateMaybeMessage< ::ftrl::FTRLRequest >(Arena* arena) {
+  return Arena::CreateInternal< ::ftrl::FTRLRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ftrl::AdvertisementResult* Arena::CreateMaybeMessage< ::ftrl::AdvertisementResult >(Arena* arena) {
-  return Arena::CreateInternal< ::ftrl::AdvertisementResult >(arena);
+template<> PROTOBUF_NOINLINE ::ftrl::FTRLResult* Arena::CreateMaybeMessage< ::ftrl::FTRLResult >(Arena* arena) {
+  return Arena::CreateInternal< ::ftrl::FTRLResult >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ftrl::AdvertisementFeedback* Arena::CreateMaybeMessage< ::ftrl::AdvertisementFeedback >(Arena* arena) {
-  return Arena::CreateInternal< ::ftrl::AdvertisementFeedback >(arena);
+template<> PROTOBUF_NOINLINE ::ftrl::FTRLFeedback* Arena::CreateMaybeMessage< ::ftrl::FTRLFeedback >(Arena* arena) {
+  return Arena::CreateInternal< ::ftrl::FTRLFeedback >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

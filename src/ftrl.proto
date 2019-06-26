@@ -7,31 +7,31 @@ import "google/protobuf/empty.proto";
 
 import "phxrpc/rpc/phxrpc.proto";
 
-message AdvertisementRequest{
+message FTRLRequest{
 	int64 user_id = 1;
 }
 
-message AdvertisementResult{ 
+message FTRLResult{ 
 	int64 ad_id = 1;
 }
 
-message AdvertisementFeedback{
+message FTRLFeedback{
 	int64 user_id = 1;
 	int64 ad_id = 2;
 	bool feedback = 3;
 
 }
-service Advertisement{
+service FTRL{
 
-	rpc Advertisement(AdvertisementRequest) returns (AdvertisementResult){
+	rpc FTRL(FTRLRequest) returns (FTRLResult){
 		option(phxrpc.CmdID) = 1;
 		option(phxrpc.OptString) = "u:";
 		option(phxrpc.Usage) = "-u <user_id>";
 	}
 
-	rpc Feedback(AdvertisementFeedback) returns (google.protobuf.Empty){
+	rpc Feedback(FTRLFeedback) returns (google.protobuf.Empty){
 		option(phxrpc.CmdID) = 2;
-		option(phxrpc.OptString) = "ad: f:";
-		option(phxrpc.Usage) = "-ad <advertisement_id> -f <feedback>";
+		option(phxrpc.OptString) = "u: a: r:";
+		option(phxrpc.Usage) = "-u <user_id> -a <ad_id> -r <feedback>";
 	}
 }

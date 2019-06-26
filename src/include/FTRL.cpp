@@ -158,67 +158,22 @@ public:
 
 int main(int argc, char const *argv[])
 {
-
-
-	// if(string(argv[1])=="-train"){
-	// 	if(argc!=4){
-	// 		cout<<"Usage: ./ftrl -train [train data] [model save location]\n";
-	// 		return 0;
-	// 	}
-	// 	cout<<"creating train set\n";
-
-
-	// FTRL ftrl(train_set.d, 0.5, 1, 1, 1);
-
-	// 	cout<<"training\n";
-	// 	ftrl.train(train_set);
-
-
-	// 	ofstream SAVE;
-	// 	SAVE.open(argv[3]);
-	// 	cout<<"saving trained model\n";
-	// 	ftrl.save(&SAVE);
-
-	// 	FILE.close();
-	// 	SAVE.close();
-	// }
-
-	// else if(string(argv[1])=="-test"){
-	// 	if(argc!=4){
-	// 		cout<<"Usage: ./ftrl -test [test data] [model save location]\n";
-	// 		return 0;
-	// 	}
-		
-	// 	cout<<"creating test set\n";
-	// 	ifstream TEST;
-	// 	TEST.open(argv[2]);
-	// 	corpus test_set(&TEST);
-
-	// 	FTRL ftrl(test_set.d, 0.5, 1, 0, 0);
-
-	// 	cout<<"loading model\n";
-	// 	ifstream LOAD;
-	// 	LOAD.open(argv[3]);
-	// 	ftrl.load(&LOAD);
-
-
-	// 	cout<<"testing\n";
-	// 	cout<<"accuracy: "<<ftrl.test(test_set)<<endl;
-
-	// 	LOAD.close();
-	// 	TEST.close();
-	// }
-
-	// else{
-	// 	cout<<"Usage: ./ftrl -train [train data] [model save location]\nUsage: ./ftrl -test [model save location] [test data]\n";
-	// }
-
-
-	FTRL ftrl(1000, 0.5, 1, 1, 1);
-
 	ifstream FILE;
-	FILE.open(argv[2]);
+	FILE.open(argv[1]);
+	cout<<"Loading train set\n";
 	corpus train_set(&FILE);
+	
+
+	FTRL ftrl(train_set.d, 0.5, 1, 1, 1);
+
+	cout<<"Loading Model\n";
+	ifstream MODEL;
+	MODEL.open(argv[2]);
+	ftrl.load(&MODEL);
+
+
+	cout<<"accuracy: "<<ftrl.test(train_set)<<endl;
+	
 
 	int shmid;
 	shmid = shmget(SHM_KEY, sizeof(struct shmseg), 0644|IPC_CREAT);
@@ -240,28 +195,24 @@ int main(int argc, char const *argv[])
 	int cur = 0;
 	while(1){
 		if(shmp->mode==0){
+			cout<<"receive user id "<<shmp->user_id<<"\n";
+
 			// sparse_vector user = get_user_feature(shmp->user_id);
 			// map<int,sparse_vector> ad = get_ads();
 
-			map<int,sparse_vector> ad;
+			double res = 0;
+			int ad_id;
+			for(int i=0;i<5;i++){
+				double p = ftrl.perdict(train_set[cur+i].x);
+				cout<<"prediction: "<<cur+i<<" : "<<p<<"\n";
+				if(p>res){
+					res = p;
+					ad_id = cur+i;
+				}
+			}
+			cur+=5;
+			shmp->ad_id = ad_id;
 
-			// for(int i=0;i<5;i++){
-			// 	ad.insert(make_pair(cur+i,train_set[i+cur].x));
-			// }
-
-			// double res = 1;
-			// int ad_id;
-			// for(auto x: ad){
-			// 	double p = ftrl.perdict(x.second);
-			// 	if(p<res){
-			// 		res = p;
-			// 		ad_id = x.first;
-			// 	}
-			// }
-
-			// shmp->ad_id = ad_id;
-			cout<<"receive id "<<shmp->user_id<<"\n";
-			shmp->ad_id = 123345;
 			cout<<"sent ad_id "<<shmp->ad_id<<"\n";
 			shmp->mode = 1;
 		}
@@ -269,9 +220,14 @@ int main(int argc, char const *argv[])
 		if(shmp->mode==2){
 			// sparse_vector ad = get_ad(shmp->ad_id);
 
+			cout<<"receive ad id "<<shmp->ad_id<<"\n";
+
 			sparse_vector ad = train_set[shmp->ad_id].x;
 
+			cout<<"Updating ("<<shmp->ad_id<<","<<shmp->feedback<<")\n";
+
 			double y = (double) shmp->feedback;
+
 			ftrl.update(ad,y);
 			shmp->mode = -1;
 		}

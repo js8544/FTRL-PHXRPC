@@ -12,28 +12,31 @@ LDFLAGS := -L$(PHXRPC_ROOT)/lib -lphxrpc $(LDFLAGS)
 #LDFLAGS := $(PLUGIN_BOOST_LDFLAGS) $(LDFLAGS)
 
 SVR_OBJS = ftrl.pb.o \
-		advertisement_service_impl.o \
-		phxrpc_advertisement_service.o \
-		phxrpc_advertisement_dispatcher.o \
-		advertisement_server_config.o \
-		advertisement_main.o
+		ftrl_service_impl.o \
+		phxrpc_ftrl_service.o \
+		phxrpc_ftrl_dispatcher.o \
+		ftrl_server_config.o \
+		ftrl_main.o
 
 CLI_OBJS = ftrl.pb.o \
-		advertisement_client.o \
-		phxrpc_advertisement_stub.o
+		ftrl_client.o \
+		phxrpc_ftrl_stub.o
 
-TARGETS = libadvertisement_client.a advertisement_main advertisement_tool_main
+TARGETS = libftrl_client.a ftrl_main ftrl_tool_main ftrl
 
 all: $(TARGETS)
 
-advertisement_main: $(SVR_OBJS)
+ftrl_main: $(SVR_OBJS)
 	$(LINKER) $^ $(LDFLAGS) -o $@
 
-libadvertisement_client.a: $(CLI_OBJS)
+libftrl_client.a: $(CLI_OBJS)
 	$(AR) $@ $^
 
-advertisement_tool_main: phxrpc_advertisement_tool.o advertisement_tool_impl.o advertisement_tool_main.o
-	$(LINKER) $^ -L. -ladvertisement_client $(LDFLAGS) -o $@
+ftrl_tool_main: phxrpc_ftrl_tool.o ftrl_tool_impl.o ftrl_tool_main.o
+	$(LINKER) $^ -L. -lftrl_client $(LDFLAGS) -o $@
+
+ftrl: ./include/FTRL.cpp ./include/sparse_vector.cpp ./include/corpus.cpp
+	g++ -std=c++11 ./include/FTRL.cpp ./include/sparse_vector.cpp ./include/corpus.cpp -o ftrl -fopenmp
 
 ########## message ##########
 
@@ -44,36 +47,36 @@ ftrl.pb.h: ftrl.proto
 
 ########## client ##########
 
-phxrpc_advertisement_stub.cpp: phxrpc_advertisement_stub.h
-phxrpc_advertisement_stub.o: phxrpc_advertisement_stub.h
-advertisement_client.cpp: phxrpc_advertisement_stub.h
-advertisement_client.o: phxrpc_advertisement_stub.h
+phxrpc_ftrl_stub.cpp: phxrpc_ftrl_stub.h
+phxrpc_ftrl_stub.o: phxrpc_ftrl_stub.h
+ftrl_client.cpp: phxrpc_ftrl_stub.h
+ftrl_client.o: phxrpc_ftrl_stub.h
 
-phxrpc_advertisement_stub.h: ftrl.proto
+phxrpc_ftrl_stub.h: ftrl.proto
 	$(PHXRPC_ROOT)/codegen/phxrpc_pb2client $(PBFLAGS) -f $^ -d .
 
 ########## service ##########
 
-phxrpc_advertisement_service.cpp: phxrpc_advertisement_service.h
-phxrpc_advertisement_service.o: phxrpc_advertisement_service.h
-advertisement_service_impl.cpp: phxrpc_advertisement_service.h
-advertisement_service_impl.o: phxrpc_advertisement_service.h
-phxrpc_advertisement_dispatcher.cpp: phxrpc_advertisement_service.h
-phxrpc_advertisement_dispatcher.o: phxrpc_advertisement_service.h
+phxrpc_ftrl_service.cpp: phxrpc_ftrl_service.h
+phxrpc_ftrl_service.o: phxrpc_ftrl_service.h
+ftrl_service_impl.cpp: phxrpc_ftrl_service.h
+ftrl_service_impl.o: phxrpc_ftrl_service.h
+phxrpc_ftrl_dispatcher.cpp: phxrpc_ftrl_service.h
+phxrpc_ftrl_dispatcher.o: phxrpc_ftrl_service.h
 
-phxrpc_advertisement_service.h: ftrl.proto
+phxrpc_ftrl_service.h: ftrl.proto
 	$(PHXRPC_ROOT)/codegen/phxrpc_pb2service $(PBFLAGS) -f $^ -d .
 
 ########## tool ##########
 
-phxrpc_advertisement_tool.cpp: phxrpc_advertisement_tool.h
-phxrpc_advertisement_tool.o: phxrpc_advertisement_tool.h
-advertisement_tool_impl.cpp: phxrpc_advertisement_tool.h
-advertisement_tool_impl.o: phxrpc_advertisement_tool.h
-advertisement_tool_main.cpp: phxrpc_advertisement_tool.h
-advertisement_tool_main.o: phxrpc_advertisement_tool.h
+phxrpc_ftrl_tool.cpp: phxrpc_ftrl_tool.h
+phxrpc_ftrl_tool.o: phxrpc_ftrl_tool.h
+ftrl_tool_impl.cpp: phxrpc_ftrl_tool.h
+ftrl_tool_impl.o: phxrpc_ftrl_tool.h
+ftrl_tool_main.cpp: phxrpc_ftrl_tool.h
+ftrl_tool_main.o: phxrpc_ftrl_tool.h
 
-phxrpc_advertisement_tool.h: ftrl.proto
+phxrpc_ftrl_tool.h: ftrl.proto
 	$(PHXRPC_ROOT)/codegen/phxrpc_pb2tool $(PBFLAGS) -f $^ -d .
 
 clean:
