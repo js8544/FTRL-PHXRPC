@@ -41,18 +41,20 @@ struct shmseg {
     }
 
     while(shmp->mode != -1){
-        std::cout<<"mode: "<<shmp->mode<<"\n";
+        // std::cout<<"mode: "<<shmp->mode<<"\n";
         //waiting
+        sleep(1);
     }
     std::cout<<"sending user_id "<<user_id<<"\n";
     shmp->user_id = (long long) user_id;
 
     shmp->mode = 0;
-    std::cout<<"sending user_id "<<user_id<<"\n";
+    // std::cout<<"sending user_id "<<user_id<<"\n";
 
     while(shmp->mode != 1){
-        std::cout<<"mode: "<<shmp->mode<<"\n";
+        // std::cout<<"mode: "<<shmp->mode<<"\n";
         //waiting for result
+        sleep(1);
     }
 
     std::cout<<"receive ad_id "<<shmp->ad_id<<"\n";
