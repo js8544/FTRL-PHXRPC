@@ -13,6 +13,7 @@
 #include <sys/ipc.h>
 #include <sys/shm.h>
 #include <iostream>
+#include <ctime>
 #define SHM_KEY 0x1234
 
 using namespace std;
@@ -43,7 +44,7 @@ struct shmseg {
     while(shmp->mode != -1){
         // std::cout<<"mode: "<<shmp->mode<<"\n";
         //waiting
-        sleep(1);
+        usleep(1);
     }
     std::cout<<"sending user_id "<<user_id<<"\n";
     shmp->user_id = (long long) user_id;
@@ -54,7 +55,7 @@ struct shmseg {
     while(shmp->mode != 1){
         // std::cout<<"mode: "<<shmp->mode<<"\n";
         //waiting for result
-        sleep(1);
+        usleep(1);    
     }
 
     std::cout<<"receive ad_id "<<shmp->ad_id<<"\n";
@@ -82,6 +83,7 @@ void SendFeedback(::google::protobuf::int64 user_id,::google::protobuf::int64 ad
 
     while(shmp->mode != -1){
         //waiting
+        usleep(1);
     }
     shmp->user_id = (long long) user_id;
     shmp->ad_id = (long long) ad_id;
@@ -104,13 +106,22 @@ int FTRLServiceImpl::PHXEcho(const google::protobuf::StringValue &req, google::p
 
 int FTRLServiceImpl::FTRL(const ftrl::FTRLRequest &req, ftrl::FTRLResult *resp) {
     std::cout<<"user_id "<<req.user_id()<<"\n";
+    clock_t begin = clock();
     ::google::protobuf::int64 ad_id = RequestAdId(req.user_id());//to be implemented
+    clock_t end = clock();
+    double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
+    cout<<"response time: "<<elapsed_secs<<"\n";
     resp->set_ad_id((::google::protobuf::int64) ad_id);
     return 0;
 }
 
 int FTRLServiceImpl::Feedback(const ftrl::FTRLFeedback &req, google::protobuf::Empty *resp) {
+    clock_t begin = clock();
     SendFeedback(req.user_id(),req.ad_id(),req.feedback());
+    clock_t end = clock();
+    double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
+    cout<<"response time: "<<elapsed_secs<<"\n";
+        
     return 0;
 }
 

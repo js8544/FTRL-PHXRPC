@@ -9,6 +9,7 @@
 #include <sys/ipc.h>
 #include <sys/shm.h>
 #include <map>
+#include <ctime>
 // #include <omp.h>
 // #include <pthread.h>
 using namespace std;
@@ -137,8 +138,21 @@ public:
 	}
 
 	void save(ofstream* FILE){
+		(*FILE)<<"w:\n";
 		sp_iter it = w.vc.begin();
 		while(it!=w.vc.end()){
+			(*FILE)<<it->first<<": "<<it->second<<endl;
+			it++;
+		}
+		(*FILE)<<"z:\n";
+		it = z.vc.begin();
+		while(it!=z.vc.end()){
+			(*FILE)<<it->first<<": "<<it->second<<endl;
+			it++;
+		}
+		(*FILE)<<"n:\n";
+		it = n.vc.begin();
+		while(it!=n.vc.end()){
 			(*FILE)<<it->first<<": "<<it->second<<endl;
 			it++;
 		}
@@ -146,12 +160,22 @@ public:
 
 	void load(ifstream* FILE){
 		string line;
+		SpVec* cur;
 		while(getline(*FILE,line)){
+			if(line=="w:"){
+				cur = &w;
+			}
+			else if(line=="z:"){
+				cur = &z;
+			}
+			else if(line=="n:"){
+				cur = &n;
+			}
 			vector<string> temp = parse_feature(line,":");
 			
 			long x = stoi(temp[0]);
 			double v = stod(temp[1]);
-			w.set_value(x,v);
+			cur->set_value(x,v);
 		}
 	}
 };
@@ -222,13 +246,21 @@ int main(int argc, char const *argv[])
 
 			cout<<"receive ad id "<<shmp->ad_id<<"\n";
 
+			clock_t begin = clock();
+
 			sparse_vector ad = train_set[shmp->ad_id].x;
 
 			cout<<"Updating ("<<shmp->ad_id<<","<<shmp->feedback<<")\n";
 
 			double y = (double) shmp->feedback;
 
-			ftrl.update(ad,y);
+			cout<<"loss: "<< ftrl.update(ad,y) <<"\n";
+
+			clock_t end = clock();
+			double elapsed_secs = double(end - begin) / CLOCKS_PER_SEC;
+			cout<<"update time: "<<elapsed_secs<<"\n";
+
+			
 			shmp->mode = -1;
 		}
 	}
